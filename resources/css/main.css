@@ -1,0 +1,233 @@
+.bg {
+    background-image: url("https://foresttrade.bg/wp-content/uploads/2016/11/150_mm_rustik_omaslen_oreh_caffeine_mall_sofia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.auth {
+    display: flex;
+    justify-content: center;
+    background-color: #b7b3b3;
+    max-width: 50%;
+    flex-direction: column;
+    margin: 0;
+    padding: 80px;
+    border-radius: 40px;
+}
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.btn {
+    font-size: 35px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: #c9c7c7;
+}
+.auth input {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #5e5c5c;
+    font-size: 30px;
+}
+.auth input::placeholder {
+    color: #000000;
+}
+.auth input:enabled {
+    color: #000000;
+    border: 1px black solid;
+}
+.adminList {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #b7b3b3;
+    max-width: 50%;
+    flex-direction: column;
+    margin: 0;
+    padding: 80px 40px 0 40px;
+    border-radius: 40px;
+}
+.link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.btnExit{
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #ff0000;
+}
+.btnBack {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #ffe800;
+}
+.exit {
+    display: flex;
+    justify-content: end;
+    margin: 15px 0;
+}
+.list {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #b7b3b3;
+    max-width: 50%;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px 0 0 0;
+    border-radius: 40px;
+}
+.shiftsText {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-top: 2px #000000 solid;
+    align-items: center;
+}
+.element {
+
+}
+.container:last-child { /* не работает!*/
+    border-bottom: 2px solid #000000;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.button{
+    display: flex;
+    padding: 0 15px;
+    justify-content: end;
+}
+.btnAdd {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #008000FF;
+}
+.addShift {
+    display: flex;
+    justify-content: start;
+    margin: 15px 0;
+}
+.removeEmploy {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #ff0000;
+}
+.date {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px #000000 solid;
+}
+.dateText {
+    font-size: 28px;
+    padding-right: 12px;
+}
+.inputDate {
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 25px;
+}
+.btnAccept {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #00ff00;
+    margin-top: 20px;
+}
+.employ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px #000000 solid;
+}
+.form_el {
+    font-size: 15px;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
+}
+.employText {
+    font-size: 20px;
+    margin: 8px 0 0 0;
+}
+.prepare {
+    font-size: 18px;
+    border-radius: 60px;
+    background-color: #e2d444;
+    text-transform: uppercase;
+}
+.ready {
+    font-size: 18px;
+    border-radius: 60px;
+    background-color: #30c21a;
+    text-transform: uppercase;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.employesList {
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 60px;
+    background-color: #e3e3e3;
+}
+/*Псевдоклассы*/
+button:active {
+    background-color: #565656;
+}
+button:enabled {
+    color: #000000;
+    border: 1px #000000 solid;
+}
+.form_el:active {
+    background-color: #565656;
+}
+.form_el:enabled {
+    color: #000000;
+    border: 1px #000000 solid;
+}
+
+
