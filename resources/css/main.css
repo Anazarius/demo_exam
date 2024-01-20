@@ -107,13 +107,14 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 10px 0;
     border-top: 2px #000000 solid;
     align-items: center;
 }
 .element {
-
+    max-width: 250px;
+    min-width: 100px;
 }
 .container:last-child { /* не работает!*/
     border-bottom: 2px solid #000000;
@@ -196,6 +197,12 @@
     background-color: #e2d444;
     text-transform: uppercase;
 }
+.paid {
+    font-size: 18px;
+    border-radius: 60px;
+    background-color: #30c21a;
+    text-transform: uppercase;
+}
 .ready {
     font-size: 18px;
     border-radius: 60px;
@@ -214,7 +221,12 @@
     border-radius: 60px;
     background-color: #e3e3e3;
 }
-/*Псевдоклассы*/
+.description {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*Псевдоклассы и общие стили*/
 button:active {
     background-color: #565656;
 }
@@ -229,5 +241,9 @@ button:enabled {
     color: #000000;
     border: 1px #000000 solid;
 }
+.bold {
+    font-weight: bold;
+}
+
 
 

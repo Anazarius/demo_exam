@@ -5,80 +5,33 @@
 </head>
 <body class = "bg">
 <div class="list">
-    <p class="shiftsText">Список смен</p>
-    {{--        foreach employes as employ--}}
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Имя</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Фамилия</p>
-        </div>
-        <div class="element">
-            <p>Здесь будут Отчество</p>
-        </div>
-        <form action="" method="post">
-            @csrf
-            <button class="removeEmploy">Уволить</button>
-        </form>
+    <p class="shiftsText">Список Сотрудников</p>
+    <div class="description">
+        <p class="element bold">Номер строки</p>
+        <p class="element bold">Имя сотрудника</p>
+        <p class="element bold">Фамилия сотрудника</p>
+        <p class="element bold">Роль</p>
     </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
+    @foreach($users as $user)
+        <div class="container">
+            <div class="element">
+                <p>{{$user->id}}</p>
+            </div>
+            <div class="element">
+                <p>{{$user->name}}</p>
+            </div>
+            <div class="element">
+                <p>{{$user->last_name}}</p>
+            </div>
+            <div class="element">
+                <p>{{$user->role_id}}</p>
+            </div>
+            <form action="" method="post">
+                @csrf
+                <button class="removeEmploy">Уволить</button>
+            </form>
         </div>
-        <div class="element">
-            <p>Здесь будет Имя</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Фамилия</p>
-        </div>
-        <div class="element">
-            <p>Здесь будут Отчество</p>
-        </div>
-        <form action="" method="post">
-            @csrf
-            <button class="removeEmploy">Уволить</button>
-        </form>
-    </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Имя</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Фамилия</p>
-        </div>
-        <div class="element">
-            <p>Здесь будут Отчество</p>
-        </div>
-        <form action="" method="post">
-            @csrf
-            <button class="removeEmploy">Уволить</button>
-        </form>
-    </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Имя</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет Фамилия</p>
-        </div>
-        <div class="element">
-            <p>Здесь будут Отчество</p>
-        </div>
-        <form action="" method="post">
-            @csrf
-            <button class="removeEmploy">Уволить</button>
-        </form>
-    </div>
+    @endforeach
     <div class="buttons">
         <div class="addShift">
             <a href="{{route("addEmployes")}}" class="link">

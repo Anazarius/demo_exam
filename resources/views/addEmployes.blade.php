@@ -15,8 +15,9 @@
             <input class="form_el" placeholder="Пароль" name="password" type="text" value="{{old('password')}}"/>
             <p class="employText">Выберите роль:</p>
             <select name="role" class="form_el">
-                <option>Официант</option>
-                <option>Повар</option>
+                @foreach($roles as $role)
+                <option>{{$role->title}}</option>
+                @endforeach
             </select>
             <button type="submit" class="btnAccept">Подтвердить</button>
         </div>

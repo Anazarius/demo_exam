@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Role;
+use App\Models\Shift;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -13,27 +18,39 @@ class PageController extends Controller
         return view('adminList');
     }
     public function admin_shifts() {
-        return view('adminShifts');
+        $shifts = Shift::all();
+        $users = User::all();
+        return view('adminShifts', compact('shifts', 'users'));
     }
     public function admin_orders() {
-        return view('adminOrders');
+        $orders = Order::all();
+        return view('adminOrders', compact('orders'));
     }
     public function admin_employes() {
-        return view('adminEmployes');
+        $users = User::all();
+        return view('adminEmployes', compact('users'));
     }
     public function add_shifts() {
-        return view('addShifts');
+        $users = User::all();
+        return view('addShifts', compact('users'));
     }
     public function add_employes() {
-        return view('addEmployes');
+        $roles = Role::all();
+        return view('addEmployes', compact('roles'));
     }
     public function chef_orders() {
-        return view('chefOrders');
+        $orders = Order::all();
+        return view('chefOrders', compact('orders'));
     }
     public function waiter_orders() {
-        return view('waiterOrders');
+        $orders = Order::all();
+        return view('waiterOrders', compact('orders'));
     }
     public function add_orders() {
         return view('addOrders');
+    }
+    public function logout() {
+        Auth::logout();
+        return view('main');
     }
 }

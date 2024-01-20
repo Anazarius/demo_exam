@@ -14,13 +14,13 @@
             </p>
             <input class="inputDate" name="date" type="date" value="{{old('date')}}"/>
             <select name="role" class="employesList">
-                <option name="waiter_1">Михалыч</option>
-                <option name="waiter_2">Виктор</option>
-                <option name="waiter_3">Кузьма</option>
-                <option name="waiter_4">Саид тупой</option>
+                @foreach($users as $user)
+                <option name="user_id">{{$user->name}}</option>
+                @endforeach
             </select>
             <button type="submit" class="btnAccept">Подтвердить</button>
         </div>
+
 
     </form>
     <div class="button">

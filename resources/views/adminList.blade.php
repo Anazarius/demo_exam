@@ -15,7 +15,7 @@
             <button type="submit" class="btn">Список сотрудников</button>
         </a>
         <div class="exit">
-            <a href="{{route("main")}}" class="link">
+            <a href="{{route("logout")}}" class="link">
                 <button type="submit" class="btnExit">Выход</button>
             </a>
         </div>

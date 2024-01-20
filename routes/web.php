@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,5 +26,7 @@ Route::get('/addEmployes', [PageController::class, 'add_employes'])->name("addEm
 Route::get('/chefOrders', [PageController::class, 'chef_orders'])->name("chefOrders");
 Route::get('/waiterOrders', [PageController::class, 'waiter_orders'])->name("waiterOrders");
 Route::get('/addOrders', [PageController::class, 'add_orders'])->name("addOrders");
+Route::get('/logout', [PageController::class, 'logout'])->name("logout");
 
-Route::post('/admin', [PageController::class, 'admin'])->name("admin");
+
+Route::post('/main', [AuthController::class, 'auth'])->name("main");

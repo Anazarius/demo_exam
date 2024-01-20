@@ -4,7 +4,7 @@
         <x-header></x-header>
     </head>
     <body class = "bg">
-            <form action="{{route("admin")}}" method="post" class="auth">
+            <form action="{{route("main")}}" method="post" class="auth">
                 @csrf
                 <div class="hello">
                     <p>Добро пожаловать!</p>

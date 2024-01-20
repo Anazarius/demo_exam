@@ -9,8 +9,8 @@
     <form action="" method="post">
         @csrf
         <div class="order">
-            <input class="form_el" placeholder="Имя столика" name="name_table" type="text" value="{{old('name_table')}}"/>
-            <input class="form_el" placeholder="Количество гостей" value = "1" max="8" name="num_guests" type="number"/>
+            <input class="form_el" placeholder="Номер столика" name="num_table" type="text" value="{{old('name_table')}}"/>
+            <input class="form_el" placeholder="Количество гостей" max="8" name="count_guests" type="number"/>
             <input class="form_el" placeholder="Заказ: " name="order" type="text" value="{{old('order')}}"/>
             <button type="submit" class="btnAccept">Подтвердить</button>
         </div>

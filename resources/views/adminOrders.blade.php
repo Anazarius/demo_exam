@@ -6,63 +6,28 @@
 <body class = "bg">
 <div class="list">
     <p class="shiftsText">Список заказов</p>
-    {{--        foreach orders as order--}}
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет номер столика</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет количество гостей</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет список блюд</p>
-        </div>
+    <div class="description">
+        <p class="element bold">Номер строки</p>
+        <p class="element bold">Номер стола</p>
+        <p class="element bold">Количество гостей</p>
+        <p class="element bold">Список заказа:</p>
     </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
+    @foreach($orders as $order)
+        <div class="container">
+            <div class="element">
+                <p>{{$order->id}}</p>
+            </div>
+            <div class="element">
+                <p>{{$order->num_table}}</p>
+            </div>
+            <div class="element">
+                <p>{{$order->count_guests}}</p>
+            </div>
+            <div class="element">
+                <p>{{$order->order}}</p>
+            </div>
         </div>
-        <div class="element">
-            <p>Здесь будет номер столика</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет количество гостей</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет список блюд</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет номер столика</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет количество гостей</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет список блюд</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="element">
-            <p>Здесь будет номер строки</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет номер столика</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет количество гостей</p>
-        </div>
-        <div class="element">
-            <p>Здесь будет список блюд</p>
-        </div>
-    </div>
+    @endforeach
     <div class="button">
         <div class="exit">
             <a href="{{route("adminList")}}" class="link">
@@ -70,7 +35,6 @@
             </a>
         </div>
     </div>
-
 </div>
 </body>
 </html>
