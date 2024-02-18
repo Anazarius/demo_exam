@@ -4,6 +4,7 @@ use App\Http\Controllers\AddEmployesController;
 use App\Http\Controllers\AddOrderController;
 use App\Http\Controllers\AddShiftController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChangeStatusController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,4 +37,8 @@ Route::post('/main', [AuthController::class, 'auth'])->name("main");
 Route::post('/addShifts', [AddShiftController::class, 'add_shift'])->name("addShifts");
 Route::post('/addEmployes', [AddEmployesController::class, 'add_employee'])->name("addEmployes");
 Route::post('/addOrders', [AddOrderController::class, 'add_order'])->name("addOrders");
+Route::post('/chefOrders/preparing/{category_id}', [ChangeStatusController::class, 'preparing'])->name("preparing");
+Route::post('/chefOrders/ready/{category_id}', [ChangeStatusController::class, 'ready'])->name("ready");
+Route::post('/waiterOrders/give/{category_id}', [ChangeStatusController::class, 'give'])->name("give");
+Route::post('/waiterOrders/pay/{category_id}', [ChangeStatusController::class, 'paid'])->name("paid");
 

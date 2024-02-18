@@ -10,6 +10,10 @@ class Order extends Model
     use HasFactory;
     public $timestamps = false;
 
+    protected $fillable = [
+        'category_id',
+    ];
+
     public function category() {
         return $this->hasMany(Order::class);
     }

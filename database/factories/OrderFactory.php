@@ -20,7 +20,7 @@ class OrderFactory extends Factory
             'num_table' => fake()->numberBetween(1,12),
             'count_guests' => fake()->numberBetween(1,8),
             'order' => fake()->text(60),
-            'category_id' => fake()->numberBetween(1,4)
+            'category_id' => "1"
         ];
     }
 }

@@ -26,12 +26,25 @@
             <div class="element">
                 <p>{{$order->order}}</p>
             </div>
-            <div>
-                <button type="submit" class="prepare">Готовиться</button>
-                <button type="submit" class="ready">Готов</button>
-            </div>
+            @if($order->category_id == 1)
+                <div>
+                    <form action="{{ route('preparing', ['category_id' => $order->id]) }}" method="post">
+                        @csrf
+                        <button type="submit" class="prepare">Готовиться</button>
+                    </form>
+                </div>
+            @endif
+            @if($order->category_id == 2)
+                <div>
+                    <form action="{{ route('ready', ['category_id' => $order->id]) }}" method="post">
+                        @csrf
+                        <button type="submit" class="ready">Готов</button>
+                    </form>
+                </div>
+            @endif
         </div>
     @endforeach
+
     <div class="button">
         <div class="exit">
             <a href="{{route("logout")}}" class="link">

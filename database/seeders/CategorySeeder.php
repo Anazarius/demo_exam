@@ -17,13 +17,16 @@ class CategorySeeder extends Seeder
             'title' => 'accept'
         ]);
         Category::factory()->create([
-            'title' => 'paid'
-        ]);
-        Category::factory()->create([
-            'title' => 'prepare'
+            'title' => 'preparing'
         ]);
         Category::factory()->create([
             'title' => 'ready'
+        ]);
+        Category::factory()->create([
+            'title' => 'given'
+        ]);
+        Category::factory()->create([
+            'title' => 'paid'
         ]);
     }
 }

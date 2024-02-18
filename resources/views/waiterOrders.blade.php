@@ -26,10 +26,22 @@
             <div class="element">
                 <p>{{$order->order}}</p>
             </div>
+            @if ($order->category_id == 3)
             <div>
-                <button type="submit" class="prepare">Принят</button>
-                <button type="submit" class="paid">Оплачен</button>
+                <form action="{{route("give", ['category_id' => $order->id]) }}" method="post">
+                    @csrf
+                    <button type="submit" class="prepare">Отдать</button>
+                </form>
             </div>
+            @endif
+            @if ($order->category_id == 4)
+            <div>
+                <form action="{{route("paid", ['category_id' => $order->id]) }}" method="post">
+                    @csrf
+                    <button type="submit" class="paid">Оплачен</button>
+                </form>
+            </div>
+            @endif
         </div>
     @endforeach
     <div class="buttons">
