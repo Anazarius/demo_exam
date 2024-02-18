@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AddEmployesController;
+use App\Http\Controllers\AddOrderController;
+use App\Http\Controllers\AddShiftController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +33,7 @@ Route::get('/logout', [PageController::class, 'logout'])->name("logout");
 
 
 Route::post('/main', [AuthController::class, 'auth'])->name("main");
+Route::post('/addShifts', [AddShiftController::class, 'add_shift'])->name("addShifts");
+Route::post('/addEmployes', [AddEmployesController::class, 'add_employee'])->name("addEmployes");
+Route::post('/addOrders', [AddOrderController::class, 'add_order'])->name("addOrders");
+

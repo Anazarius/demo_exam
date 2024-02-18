@@ -8,7 +8,7 @@
     <p class="shiftsText">Список смен</p>
     <div class="description">
         <p class="element bold">Номер строки</p>
-        <p class="element bold">Дата</p>
+        <p class="element bold">Дата </p>
         <p class="element bold">Сотрудник</p>
     </div>
     @foreach($shifts as $shift)
@@ -20,7 +20,8 @@
                 <p>{{$shift->date}}</p>
             </div>
             <div class="element">
-                <p>{{$shift->user_id}}</p>
+                <p>{{$shift->user->name}}</p>
+                <p>{{$shift->user->last_name}}</p>
             </div>
         </div>
     @endforeach

@@ -16,7 +16,7 @@
             <p class="employText">Выберите роль:</p>
             <select name="role" class="form_el">
                 @foreach($roles as $role)
-                <option>{{$role->title}}</option>
+                <option value="{{$role->id}}">{{$role->title}}</option>
                 @endforeach
             </select>
             <button type="submit" class="btnAccept">Подтвердить</button>

@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $fillable = ['name', 'last_name', 'login', 'password'];
 
     public function role() {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsTo(Role::class, 'role_id');
     }
     public function shift() {
         return $this->hasMany(Shift::class);

@@ -34,5 +34,6 @@ class AuthController extends Controller
                 return redirect('/chefOrders');
             }
         }
+        else return redirect('/');
     }
 }

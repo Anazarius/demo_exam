@@ -115,6 +115,7 @@
 .element {
     max-width: 250px;
     min-width: 100px;
+    word-wrap: break-word;
 }
 .container:last-child { /* не работает!*/
     border-bottom: 2px solid #000000;
@@ -223,7 +224,7 @@
 }
 .description {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
 }
 
 /*Псевдоклассы и общие стили*/

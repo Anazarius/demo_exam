@@ -28,7 +28,9 @@ class PageController extends Controller
     }
     public function admin_employes() {
         $users = User::all();
-        return view('adminEmployes', compact('users'));
+        $currentUser = Auth::user();
+        $role = Role::where('id', $currentUser->role_id)->first();
+        return view('adminEmployes', compact('users', 'role'));
     }
     public function add_shifts() {
         $users = User::all();

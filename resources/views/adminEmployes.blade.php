@@ -24,7 +24,7 @@
                 <p>{{$user->last_name}}</p>
             </div>
             <div class="element">
-                <p>{{$user->role_id}}</p>
+                <p>{{$user->role->title}}</p>
             </div>
             <form action="" method="post">
                 @csrf

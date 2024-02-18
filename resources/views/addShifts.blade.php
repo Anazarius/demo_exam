@@ -15,7 +15,7 @@
             <input class="inputDate" name="date" type="date" value="{{old('date')}}"/>
             <select name="role" class="employesList">
                 @foreach($users as $user)
-                <option name="user_id">{{$user->name}}</option>
+                    <option value="{{$user->id}}">{{$user->name}}</option>
                 @endforeach
             </select>
             <button type="submit" class="btnAccept">Подтвердить</button>
@@ -25,7 +25,7 @@
     </form>
     <div class="button">
         <div class="exit">
-            <a href="{{route("adminList")}}" class="link">
+            <a href="{{route("adminShifts")}}" class="link">
                 <button type="submit" class="btnBack">Назад</button>
             </a>
         </div>
